@@ -45,5 +45,9 @@ The repository contains an app code, which allows to **upload single image** fro
     sudo docker run -p 80:5000 app-serengeti . 
     ```
     The console shoud say that the app is running on *0.0.0.5000*.
-11. In the browser open your **public DNS** link. It should display the app. Click *Predict* button. The predicted label should be displayed below.
+11. In the browser open your **public DNS** link. It should display the app:
+![the app](https://raw.githubusercontent.com/SylwiaOliwia2/Serengeti_deployment/master/images/app_GUI.png =250x)
+    Click *Predict* button. The predicted label should be displayed below.
 12. Close the app and turn the machine off. 
+
+In the folder `/images` you can find example images.
