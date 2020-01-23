@@ -1,6 +1,8 @@
 # Serengeti_deployment
 
-The repository contains an app code, which allows to **upload single image** from Serengeti Dataset and **predict** if the image is *blank* (no animals visible) or *non-blank* (animals visible on the picture). It's a proof of concept model, which aim to exclude *blank* images, which bring no information regarding animal behaviour research. In my [blog post](https://sylwiamielnicka.com/blog/image-data-exploration-serengeti-dataset/) you can find more about **data exploration**. I described the process of training model in the [Kaggle notebook](https://www.kaggle.com/sylwiamielnicka/camera-trap-image-identifier-pytorch-cyclicallr). [Another repository](https://github.com/SylwiaOliwia2/Serengeti_AWS_Prediction) stores the code which **predicts set of** (Serengeti) **images** uploaded to AWS S3.
+The repository contains an app code, which allows to **upload single image** from Serengeti Dataset and **predict** if the image is *blank* (no animals visible) or *non-blank* (animals visible on the picture). It's a proof of concept model, which aim to exclude *blank* images, which bring no information regarding animal behaviour research. In my [blog post](https://sylwiamielnicka.com/blog/image-data-exploration-serengeti-dataset/) you can find more about **data exploration**. I described the process of training model in the [Kaggle notebook](https://www.kaggle.com/sylwiamielnicka/camera-trap-image-identifier-pytorch-cyclicallr). [Another repository](https://github.com/SylwiaOliwia2/Serengeti_AWS_Prediction) stores the code which **predicts set of** (Serengeti) **images** uploaded to AWS S3. The GUI appearance comes form **Fast.AI** [lesson 2](https://course.fast.ai/videos/?lesson=2), but was adjusted for PyTorch + Flask.
+
+![the app](images/app_GUI.png)
 
 # Deployment (AWS EC2)
 
@@ -45,9 +47,7 @@ The repository contains an app code, which allows to **upload single image** fro
     sudo docker run -p 80:5000 app-serengeti . 
     ```
     The console shoud say that the app is running on *0.0.0.5000*.
-11. In the browser open your **public DNS** link. It should display the app:
-![the app](https://raw.githubusercontent.com/SylwiaOliwia2/Serengeti_deployment/master/images/app_GUI.png =250x)
-    Click *Predict* button. The predicted label should be displayed below.
+11. In the browser open your **public DNS** link. It should display the app. Click *Predict* button. The predicted label should be displayed below.
 12. Close the app and turn the machine off. 
 
 In the folder `/images` you can find example images.
